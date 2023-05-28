@@ -2,6 +2,7 @@ package com.azimzada.navigationdrawerkullanimiudemy
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.TextView
 import androidx.appcompat.app.ActionBar
 import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.core.view.GravityCompat
@@ -29,6 +30,8 @@ class MainActivity : AppCompatActivity() {
         val toggle = ActionBarDrawerToggle(this, binding.drawer, binding.toolbar, 0, 0)
         binding.drawer.addDrawerListener(toggle)
         toggle.syncState()
+        val basliq = binding.navigationView.inflateHeaderView(R.layout.navigation_basliq)
+        basliq.findViewById<TextView>(R.id.basliq).text = "Hello World!!"
 
     }
 
